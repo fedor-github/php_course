@@ -24,3 +24,10 @@ echo $palindrome[4] . PHP_EOL; // will output character "p"
 // Using this feature and a "for" loop, reverse the string $palindrome
 // To get the string length use the PHP standard function strlen()
 
+$reversedPalindrome = '';
+for ($i = strlen($palindrome) - 1; $i >= 0; $i--) {
+    $reversedPalindrome .= $palindrome[$i];
+}
+
+echo $palindrome . PHP_EOL;
+echo $reversedPalindrome . PHP_EOL;
