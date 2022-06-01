@@ -14,6 +14,11 @@ $greatestRockHits = [
 ];
 // Display it in descending order using a "for" loop
 
+$lastindex = count($greatestRockHits) - 1;
+for ($i = $lastindex; $i >= 0; $i--) {
+ $songs = $greatestRockHits[$i];
+ echo " $i, $songs \n";
+} 
 
 echo "\n\n";
 
