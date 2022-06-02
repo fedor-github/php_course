@@ -1,14 +1,5 @@
 <?php
 
-require_once __DIR__ . '/bootstrap.php';
-
-//require __DIR__ . '/greeting.php';
-//require __DIR__ . '/greeting.php';
-//require __DIR__ . '/greeting.php';
-//require __DIR__ . '/greeting.php';
-//
-//echo 'Next code' . PHP_EOL;
-
 $numbers = [];
 for ($i = 1; $i < 101; $i++) {
     $numbers[] = $i;
