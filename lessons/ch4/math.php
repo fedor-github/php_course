@@ -53,3 +53,8 @@ for ($i = 0; $i < 1000000; $i++) {
 
 print_r($random);
 echo "\n";
+
+$negative = -7;
+echo abs($negative) . PHP_EOL;
+$positive = 7;
+echo abs($positive) . PHP_EOL;
