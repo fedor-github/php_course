@@ -33,3 +33,13 @@ if ($isDevil === false) {
 
 $superRussian = str_replace(' ', '.', $russian);
 echo "$superRussian\n";
+
+$sentence = <<<MYSTRING
+asdkfl
+asdfjlkj
+asdflkj \n 
+\t super\n
+MYSTRING;
+
+echo $sentence;
+
