@@ -1,15 +1,15 @@
 <?php
 
 // You get the users list.
-// You could get from the DB or through API, it doesn't matter.
+// You could get it from the DB or through API, it doesn't matter.
 // In this example you get it from JSON file.
 
 $usersJson = file_get_contents('users.json');
 $users = json_decode($usersJson, true);
 
-// This list contains user emails, and you job is to send a letter to each user, using fooSender() function.
+// This list contains user emails, and you job is to send a letter to each user, using barSender() function.
 
-function fooSender($email, $login) {
+function barSender($email, $login) {
     $year = (new DateTime())->format('Y');
     $mail = <<<MAIL
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -39,3 +39,10 @@ MAIL;
 // In a month it's a decent amount of money comes out.
 // Your job is to exclude such emails from the mailing list.
 
+foreach ($users as $user) {
+    if (!preg_match('/\+{1}\d+@/', $user['email'])) {
+        barSender($user['email'], $user['login']);
+    }
+}
+
+echo 'Done!' . PHP_EOL;

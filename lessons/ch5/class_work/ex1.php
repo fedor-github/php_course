@@ -17,3 +17,16 @@ TXT;
 
 // Find all ip addresses and put them into $ipv4, $ipv6 arrays.
 // Display the arrays.
+
+$regExp = [
+    'ipv4' => '/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}/',
+    'ipv6' => '/([\da-f]{1,4}:){7}[\da-f]{1,4}/',
+];
+
+$parsed = [];
+foreach ($regExp as $key => $pattern) {
+    $res = preg_match_all($pattern, $text, $matches);
+    $parsed[$key] = $matches[0];
+}
+
+var_dump($parsed);
